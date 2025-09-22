@@ -1,0 +1,63 @@
+/* style.css — updated for grouped workouts */
+:root {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --text: #0b1220;
+  --muted: #6b7280;
+  --brand: #2563eb;
+  --radius: 12px;
+  --gap: 1rem;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 1rem; }
+.site-header { padding: 1rem 0; }
+.site-title { margin: 0; font-size: 1.5rem; }
+.lead { color: var(--muted); }
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 6px 18px rgba(9,10,15,0.05);
+}
+.card.small { background: #fdfdfd; }
+
+.form .row { display: flex; flex-direction: column; margin-bottom: .75rem; }
+.form .row.small { flex-direction: row; gap: .5rem; }
+.form label { font-size: .85rem; margin-bottom: .25rem; }
+.form input, .form textarea {
+  padding: .6rem; border-radius: 8px; border: 1px solid #e6e9ee; font-size: .95rem;
+}
+
+.actions { display: flex; gap: .5rem; }
+button {
+  background: var(--brand);
+  color: white;
+  border: none;
+  padding: .6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button.muted { background: transparent; color: var(--muted); border: 1px solid #ddd; }
+
+#exercise-list { list-style: none; padding: 0; margin: .5rem 0; }
+#exercise-list li { border-bottom: 1px solid #eee; padding: .25rem 0; }
+
+#workout-list .workout-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: .5rem;
+}
+#workout-list summary { cursor: pointer; padding: .5rem; font-weight: 600; }
+#workout-list ul { list-style: disc; margin: .5rem 1.5rem; padding: 0; }
+
+.small-note { color: var(--muted); font-size: .85rem; }
